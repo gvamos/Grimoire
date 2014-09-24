@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/refresh"
+        android:orderInCategory="1"
+        android:title="Refresh"/>
+    
+    <item
+        android:id="@+id/settings"
+        android:orderInCategory="1"
+        android:title="Settings"/>
+    
+    <item
+        android:id="@+id/voters"
+        android:orderInCategory="2"
+        android:title="Voters"/>
+    
+    <item
+        android:id="@+id/elections"
+        android:orderInCategory="3"
+        android:title="Elections"/>
+    
+    <item
+        android:id="@+id/debug"
+        android:orderInCategory="4"
+        android:title="Debug"/>
+
+</menu>

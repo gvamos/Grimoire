@@ -1,0 +1,63 @@
+# ~/.profile: executed by the command interpreter for login shells.
+# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
+# exists.
+# see /usr/share/doc/bash/examples/startup-files for examples.
+# the files are located in the bash-doc package.
+
+# the default umask is set in /etc/profile; for setting the umask
+# for ssh logins, install and configure the libpam-umask package.
+#umask 022
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+export PATH=/home/gvamos/perforce/software/bin:/home/gvamos/bin:$PATH
+
+export P4PORT=p4proxy-cj.wl.corpsys.vclk.net:5666
+export P4USER=gvamos
+export P4CLIENT=gvamos-workspace
+export P4ROOT=/home/gvamos/perforce
+
+export DEVDB_HOST=devdb.db.cj.com
+export DEVDB_PORT=1521
+export DEVDB_SID=devdb
+export DEVDB_USER=spud
+
+export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
+
+#export JAVA_HOME="/usr/lib/jvm/java-6-sun"
+#export JAVA_HOME="/opt/java"
+#export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
+export JAVA_HOME="/home/gvamos/perforce/software/java/jdk1.6.0_25-x86_64"
+
+export MAVEN_OPTS="-XX:+CMSClassUnloadingEnabled -Xmx1024m -XX:MaxPermSize=128m"
+
+export TNS_ADMIN="/home/gvamos/perforce/software/sqlplus/instantclient_10_2/network/admin"
+
+export GRAILS_HOME="/opt/grails"
+export IDEA_HOME="/opt/idea"
+export SCALA_HOME="/opt/scala"
+export PLAY_HOME="/opt/play"
+export ASTUDIO_HOME="/opt/astudio"
+export ECLIPSE_HOME="/opt/eclipse"
+export ANDROID_HOME="/opt/android/"
+export GRADLE_HOME="/opt/gradle/"
+export M311_HOME="/opt/m311"
+export ADB_TOOLS_HOME="/opt/android-sdk-linux/platform-tools/"
+
+export PYLIB="/home/gvamos/opt/pylib"
+export PYTHONPATH=$PYTHONPATH:$PYLIB
+export SQLDEV="/home/gvamos/perforce/software/sqldeveloper"
+
+export PATH=/home/gvamos/perforce/software/resin/3.1.8/bin:~/perforce/software/bin:$PLAY_HOME:$IDEA_HOME/bin:$SCALA_HOME/bin:$JAVA_HOME/bin:$PATH:$GRAILS_HOME/bin:$SQLDEV:$ASTUDIO_HOME/bin:$GRADLE_HOME/bin:$ADB_TOOLS_HOME
+
+

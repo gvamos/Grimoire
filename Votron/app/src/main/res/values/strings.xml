@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Votron</string>
+    <string name="hello_world">Welcome to Votron!</string>
+    <string name="action_settings">Settings</string>
+    
+        <string name="voter_prompt">Choose a voter</string>
+    <string name="election_prompt">Choose an election</string>
+
+</resources>
